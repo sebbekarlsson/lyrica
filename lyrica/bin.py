@@ -1,5 +1,5 @@
 import argparse
-from lyrica.GeniusSession import GeniusSession
+from lyrica.Lyrica import Lyrica
 
 
 parser = argparse.ArgumentParser()
@@ -9,9 +9,6 @@ args = parser.parse_args()
 
 
 def run():
-    artist = args.artist
-    song = args.song
+    lyrica = Lyrica()
 
-    sess = GeniusSession()
-
-    print(sess.get_lyrics(artist, song))
+    print(lyrica.get_lyrics(args.artist, args.song))

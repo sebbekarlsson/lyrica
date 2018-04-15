@@ -3,6 +3,7 @@
 
 
 ## Usage
+### Command Line (CLI)
 > To use the command line tool:
 
     $ lyrica <artist> <song-name>
@@ -19,6 +20,17 @@
     > Remember when you loved me
 
     ...
+
+### Using it in your application
+> Here is an example:
+
+    from lyrica.Lyrica import Lyrica
+
+    
+    lyrica = Lyrica()
+    lyrics = lyrica.get_lyrics('tom waits', 'hold on')
+
+    print(lyrics)
 
 # Install
 > To install lyrica, simply run the `setup.py`
