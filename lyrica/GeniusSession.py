@@ -1,5 +1,6 @@
 from lyrica.SiteSession import SiteSession
 from bs4 import BeautifulSoup
+from lyrica.utils import clean_lyrics
 
 
 class GeniusSession(SiteSession):
@@ -17,4 +18,4 @@ class GeniusSession(SiteSession):
         soup = BeautifulSoup(resp.text, 'html.parser')
         lyrics_element = soup.find('div', {'class': 'lyrics'})
 
-        return lyrics_element.text if lyrics_element else None
+        return clean_lyrics(lyrics_element.text) if lyrics_element else None

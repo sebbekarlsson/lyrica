@@ -1,5 +1,6 @@
 from lyrica.SiteSession import SiteSession
 from bs4 import BeautifulSoup
+from lyrica.utils import clean_lyrics
 
 
 class AZLyricsSession(SiteSession):
@@ -26,4 +27,4 @@ class AZLyricsSession(SiteSession):
             div:nth-of-type(5)
         ''')
 
-        return element.text if element else None
+        return clean_lyrics(element.text) if element else None
