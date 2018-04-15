@@ -1,12 +1,12 @@
-from requests import Session
+from lyrica.SiteSession import SiteSession
 from bs4 import BeautifulSoup
 
 
-class GeniusSession(object):
+class GeniusSession(SiteSession):
 
     def __init__(self):
+        SiteSession.__init__(self)
         self.base_url = 'https://genius.com/'
-        self.session = Session()
 
     def get_lyrics(self, artist, song):
         url = (self.base_url + artist + '-' + song + '-lyrics')\
