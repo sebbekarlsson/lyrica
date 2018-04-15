@@ -36,3 +36,7 @@
 > To install lyrica, simply run the `setup.py`
 
     $ python setup.py install
+
+> or:
+
+    $ pip install lyrica
