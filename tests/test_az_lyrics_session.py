@@ -13,5 +13,5 @@ def test_no_lyrics():
 def test_lyrics():
     lyrics = session.get_lyrics('tom waits', 'hold on')
 
-    assert type(lyrics) is unicode
+    assert type(lyrics) is unicode or type(lyrics) is str
     assert 'sign' in lyrics

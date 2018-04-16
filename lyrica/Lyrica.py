@@ -13,12 +13,14 @@ class Lyrica(object):
             AZLyricsSession()
         ]
 
+    def get_cache_filename(self, artist, song):
+        return (artist + '_' + song).replace(' ', '-') + '.txt'
+
     def save_lyrics(self, artist, song, lyrics):
         if not os.path.isdir(self.directory):
             os.makedirs(self.directory)
 
-        fname = self.directory + '/'\
-            + (artist + '_' + song).replace(' ', '-') + '.txt'
+        fname = self.directory + '/' + self.get_cache_filename(artist, song)
 
         if not os.path.exists(fname):
             with open(fname, 'w+') as _file:
@@ -26,8 +28,7 @@ class Lyrica(object):
             _file.close()
 
     def get_cached_lyrics(self, artist, song):
-        fname = self.directory + '/'\
-            + (artist + '_' + song).replace(' ', '-') + '.txt'
+        fname = self.directory + '/' + self.get_cache_filename(artist, song)
 
         if os.path.isfile(fname):
             contents = ''
