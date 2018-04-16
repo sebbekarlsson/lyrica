@@ -11,4 +11,6 @@ args = parser.parse_args()
 def run():
     lyrica = Lyrica()
 
-    print(lyrica.get_lyrics(args.artist, args.song))
+    lyrics = lyrica.get_lyrics(args.artist, args.song)
+
+    print lyrics if lyrics else 'No lyrics was found'
