@@ -49,3 +49,6 @@
 > Then to run the tests:
 
     $ py.test
+
+# notes
+> Lyrics are cached in `~/.lyrics` .
