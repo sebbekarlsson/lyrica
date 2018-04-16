@@ -32,7 +32,7 @@
 
     print(lyrics)
 
-# Install
+## Install
 > To install lyrica, simply run the `setup.py`
 
     $ python setup.py install
@@ -41,7 +41,7 @@
 
     $ pip install lyrica
 
-# Unit tests
+## Unit tests
 > To run unit tests, first install `pytest`:
 
     $ pip install pytest
@@ -50,5 +50,5 @@
 
     $ py.test
 
-# notes
+## notes
 > Lyrics are cached in `~/.lyrics` .
