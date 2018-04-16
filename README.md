@@ -40,3 +40,12 @@
 > or:
 
     $ pip install lyrica
+
+# Unit tests
+> To run unit tests, first install `pytest`:
+
+    $ pip install pytest
+
+> Then to run the tests:
+
+    $ py.test
