@@ -3,7 +3,7 @@ from setuptools import setup
 
 setup(
     name='lyrica',
-    version='1.2',
+    version='1.3',
     install_requires=[
         'requests',
         'bs4'
